@@ -153,7 +153,7 @@ app.get('*', function(req, res) {
 
 
 //starting server
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, process.env.IP, function(){
     console.log("Server has been started...");
 });
