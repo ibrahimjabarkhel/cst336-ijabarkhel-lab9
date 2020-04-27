@@ -6,7 +6,6 @@ var mysql = require('mysql');
 app.use(express.static("public")); //folder for images, css, js
 app.set("view engine", "ejs");
 
-
 /* Configure MySQL DBMS */
 const connection = mysql.createConnection({
     host: 'us-cdbr-iron-east-01.cleardb.net',
@@ -15,6 +14,18 @@ const connection = mysql.createConnection({
     database: 'heroku_4840a4f6d228855'
 });
 connection.connect();
+
+// Handling timeout of server
+const pool = mysql.createPool({
+  host: 'us-cdbr-iron-east-01.cleardb.net',
+  user: 'b351170816a0b9',
+  password: '5f55028e',
+  database: 'heroku_4840a4f6d228855'
+});
+
+// ... later
+pool.query('select 1 + 1', (err, rows) => { /* */ });
+
 
 /* Route Handlers */
 app.get('/', function(req, res){
