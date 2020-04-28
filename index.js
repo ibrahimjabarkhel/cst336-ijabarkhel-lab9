@@ -8,19 +8,19 @@ app.set("view engine", "ejs");
 
 /* Configure MySQL DBMS */
 const connection = mysql.createConnection({
-    host: 'us-cdbr-iron-east-01.cleardb.net',
-    user: 'b351170816a0b9',
-    password: '5f55028e',
-    database: 'heroku_4840a4f6d228855'
+    host: 'un0jueuv2mam78uv.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+    user: 'dim16dzdmeq6zmsb',
+    password: 'esm83ra7s4v3mms9',
+    database: 'b7luwlpvowtwflla'
 });
 connection.connect();
 
 // Handling timeout of server
 const pool = mysql.createPool({
-  host: 'us-cdbr-iron-east-01.cleardb.net',
-  user: 'b351170816a0b9',
-  password: '5f55028e',
-  database: 'heroku_4840a4f6d228855'
+    host: 'un0jueuv2mam78uv.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+    user: 'dim16dzdmeq6zmsb',
+    password: 'esm83ra7s4v3mms9',
+    database: 'b7luwlpvowtwflla'
 });
 
 // ... later
